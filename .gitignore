@@ -1,0 +1,5 @@
+﻿fuel.sqlite
+*.sqlite
+*.db
+.DS_Store
+Thumbs.db
