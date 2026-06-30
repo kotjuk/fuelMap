@@ -274,6 +274,13 @@
         color: #6b7280;
         font-size: 14px;
     }
+
+    .report-line small {
+    color: #6b7280;
+    font-weight: normal;
+    margin-left: 4px;
+    }
+    
     </style>
 </head>
 <body>
@@ -285,19 +292,24 @@
 
 <div class="toolbar">
     <input id="search" placeholder="Поиск по адресу или номеру АЗС">
+
+    <select id="city">
+        <option value="">Все места</option>
+    </select>
+
     <select id="fuel">
         <option value="">Все виды</option>
         <option value="92">АИ-92</option>
         <option value="95">АИ-95</option>
         <option value="95_pulsar">95 Pulsar</option>
+        <option value="100">АИ-100</option>
         <option value="diesel_summer">ДТ</option>
+        <option value="diesel_pulsar_summer">ДТ Pulsar</option>
     </select>
 </div>
 
 <div id="count">Загрузка...</div>
 <div id="list"></div>
-
-<script src="app.js"></script>
 
 <script src="app.js"></script>
 
