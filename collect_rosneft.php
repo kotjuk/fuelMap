@@ -3,7 +3,6 @@
 const DB_FILE = __DIR__ . '/fuel.sqlite';
 
 // Пока используем найденный endpoint Роснефти.
-// Если он не сработает — заменим на точный URL из твоего curl.
 const ROSNEFT_URL = 'https://rn-brand-map.sitesoft.ru/api/v19/mapobject';
 
 // Примерная зона Тульской области

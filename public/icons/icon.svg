@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="96" fill="#111827"></rect>
+  <circle cx="256" cy="256" r="150" fill="#2563eb"></circle>
+  <path d="M210 135h92c24 0 44 20 44 44v198c0 18-15 33-33 33H199c-18 0-33-15-33-33V179c0-24 20-44 44-44z" fill="white"></path>
+  <rect x="204" y="170" width="104" height="70" rx="12" fill="#bfdbfe"></rect>
+  <path d="M346 205h30c15 0 27 12 27 27v98c0 24-19 43-43 43h-14v-34h14c5 0 9-4 9-9v-98h-23z" fill="white"></path>
+  <text x="256" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="64" font-weight="700" fill="#111827">₽</text>
+</svg>
