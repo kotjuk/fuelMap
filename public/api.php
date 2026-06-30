@@ -16,18 +16,16 @@ $db = new PDO('sqlite:' . $dbFile);
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 $db->exec("
-CREATE TABLE IF NOT EXISTS station_reports (
+CREATE TABLE IF NOT EXISTS station_reports_v2 (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     station_id INTEGER NOT NULL,
-    fuel_92 TEXT,
-    fuel_95 TEXT,
-    fuel_95_pulsar TEXT,
-    fuel_diesel TEXT,
+    fuel_statuses TEXT NOT NULL,
     queue_level TEXT,
     comment TEXT,
     user_agent TEXT,
     ip_hash TEXT,
-    created_at TEXT
+    created_at TEXT,
+    created_ts INTEGER
 );
 ");
 
@@ -88,12 +86,14 @@ foreach ($rows as $row) {
 
 $reportRows = $db->query("
     SELECT r.*
-    FROM station_reports r
+    FROM station_reports_v2 r
     INNER JOIN (
-        SELECT station_id, MAX(id) AS max_id
-        FROM station_reports
+        SELECT station_id, MAX(created_ts) AS max_ts
+        FROM station_reports_v2
         GROUP BY station_id
-    ) x ON x.max_id = r.id
+    ) x
+      ON x.station_id = r.station_id
+     AND x.max_ts = r.created_ts
 ")->fetchAll(PDO::FETCH_ASSOC);
 
 foreach ($reportRows as $report) {
@@ -104,13 +104,11 @@ foreach ($reportRows as $report) {
     }
 
     $stations[$sid]['latest_report'] = [
-        'fuel_92' => $report['fuel_92'],
-        'fuel_95' => $report['fuel_95'],
-        'fuel_95_pulsar' => $report['fuel_95_pulsar'],
-        'fuel_diesel' => $report['fuel_diesel'],
+        'fuel_statuses' => json_decode($report['fuel_statuses'] ?: '{}', true),
         'queue_level' => $report['queue_level'],
         'comment' => $report['comment'],
         'created_at' => $report['created_at'],
+        'created_ts' => $report['created_ts'],
     ];
 }
 

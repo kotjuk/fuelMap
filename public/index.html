@@ -109,98 +109,171 @@
             font-size: 14px;
         }
 
-.report-button {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: 100%;
-    padding: 11px;
-    border: 0;
-    border-radius: 10px;
-    background: #2563eb;
-    color: white;
-    font-size: 15px;
-    cursor: pointer;
-}
+    .report-button {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+        padding: 11px;
+        border: 0;
+        border-radius: 10px;
+        background: #2563eb;
+        color: white;
+        font-size: 15px;
+        cursor: pointer;
+    }
 
-.report-button:active {
-    transform: scale(0.99);
-}
+    .report-button:active {
+        transform: scale(0.99);
+    }
 
-.report-empty {
-    background: #f3f4f6;
-}
+    .report-empty {
+        background: #f3f4f6;
+    }
 
-.modal-backdrop {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,.55);
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    z-index: 1000;
-}
+    .modal-backdrop {
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,.55);
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        z-index: 1000;
+    }
 
-.modal {
-    width: 100%;
-    max-width: 520px;
-    background: white;
-    border-radius: 18px 18px 0 0;
-    padding: 18px;
-    box-sizing: border-box;
-    max-height: 90vh;
-    overflow: auto;
-}
+    .modal {
+        width: 100%;
+        max-width: 520px;
+        background: white;
+        border-radius: 18px 18px 0 0;
+        padding: 18px;
+        box-sizing: border-box;
+        max-height: 90vh;
+        overflow: auto;
+    }
 
-.modal h2 {
-    margin-top: 0;
-}
+    .modal h2 {
+        margin-top: 0;
+    }
 
-.modal-address {
-    color: #4b5563;
-    font-size: 14px;
-    margin-bottom: 14px;
-}
+    .modal-address {
+        color: #4b5563;
+        font-size: 14px;
+        margin-bottom: 14px;
+    }
 
-.modal label {
-    display: block;
-    margin-bottom: 12px;
-    font-size: 14px;
-}
+    .modal label {
+        display: block;
+        margin-bottom: 12px;
+        font-size: 14px;
+    }
 
-.modal select,
-.modal textarea {
-    width: 100%;
-    box-sizing: border-box;
-    margin-top: 5px;
-    padding: 10px;
-    border: 1px solid #d1d5db;
-    border-radius: 8px;
-    font-size: 15px;
-}
+    .modal select,
+    .modal textarea {
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 5px;
+        padding: 10px;
+        border: 1px solid #d1d5db;
+        border-radius: 8px;
+        font-size: 15px;
+    }
 
-.modal textarea {
-    min-height: 70px;
-    resize: vertical;
-}
+    .modal textarea {
+        min-height: 70px;
+        resize: vertical;
+    }
 
-.modal-actions {
-    display: flex;
-    gap: 8px;
-}
+    .modal-actions {
+        display: flex;
+        gap: 8px;
+    }
 
-.modal-actions button {
-    flex: 1;
-    padding: 12px;
-    border: 0;
-    border-radius: 10px;
-    background: #16a34a;
-    color: white;
-    font-size: 15px;
-}
+    .modal-actions button {
+        flex: 1;
+        padding: 12px;
+        border: 0;
+        border-radius: 10px;
+        background: #16a34a;
+        color: white;
+        font-size: 15px;
+    }
 
-.modal-actions button.secondary {
-    background: #6b7280;
-}
+    .modal-actions button.secondary {
+        background: #6b7280;
+    }
+
+    .section-title {
+    font-size: 13px;
+    font-weight: bold;
+    color: #374151;
+    margin-bottom: 8px;
+    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    }
+
+    .charging-block {
+        margin-top: 8px;
+        margin-bottom: 10px;
+        padding: 10px;
+        background: #f8fafc;
+        border-radius: 10px;
+    }
+
+    .charging-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .charge-badge {
+        background: #ecfeff;
+        color: #155e75;
+        padding: 6px 9px;
+        border-radius: 999px;
+        font-size: 14px;
+    }
+
+    .report {
+        margin-top: 10px;
+        padding: 10px 12px;
+        background: #fef3c7;
+        border-radius: 10px;
+        font-size: 14px;
+    }
+
+    .report-title {
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+
+    .report-line {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 2px 0;
+    }
+
+    .report-comment {
+        margin-top: 8px;
+        color: #4b5563;
+    }
+
+    .report-time {
+        margin-top: 8px;
+        color: #6b7280;
+        font-size: 13px;
+    }
+
+    .report-empty {
+        background: #f3f4f6;
+    }
+
+    .modal-note {
+        margin-bottom: 12px;
+        color: #6b7280;
+        font-size: 14px;
+    }
     </style>
 </head>
 <body>
